@@ -1,19 +1,16 @@
-def upp_letters(text):
-    '''Count the number of uppercase starting letters and lowercase letters in each word of the sentence'''
-    u=0
-    l=0
-    word_list=list(text.split())
-    for w in word_list:
-        if w[0].isupper()==True:
-            u = u+1
+def case_letter(text):
+    '''Count the number of upper and lowercase letters in a given string'''
+    uppercase = 0
+    lowercase = 0
+    for char in text:
+        if char.isupper():
+            uppercase +=1
+            
+        elif char.islower():
+            lowercase +=1
+
         else:
             pass
-    for w in word_list:
-        for i in range(0,len(w)):
-            if w[i].islower()==True:
-                l=l+1
-            else:
-                pass
-    print('No of uppercase letters: ',u)
-    print('No of uppercase letters: ',l)
-            
+    print(f'The given string is: {text}')
+    print(f'The number of uppercase letters in the above stirng is {uppercase}')
+    print(f'The number of lowercase letters in the above stirng is {lowercase}')
